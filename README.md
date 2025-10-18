@@ -4,3 +4,4 @@
 <br>Implementing formatter and linter for Python and SQL.Then, we deploy changes to environment or somewhere.
 <br>I intend to create a Building CI CD for Data Projects
 <br>It will be used Example Usage of the GitHub context [Link](https://docs.github.com/en/actions/reference/workflows-and-actions/contexts#example-usage-of-the-github-context)
+<br>Look for my notes to see what should be added from course to practise doing GitHub Actions
