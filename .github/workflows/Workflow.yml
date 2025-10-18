@@ -1,6 +1,6 @@
 name: Simple Workflow
 run-name: ${{ github.actor }} tests this workflow
-on: [push]
+on: [push, pull_request]
 
 jobs:
     firstjob:
@@ -8,7 +8,7 @@ jobs:
         steps:
             - name: Checkout repository code
               uses: actions/checkout@v5
-            - run: echo "The ${{ github.repository }} repository has been cloned to the runner"
+            - run: echo "The ${{ github.repository }} repository has been cloned to the runner. Using Github context"
             - name: First Step
               run: echo "This is first step."
             - name: Second step
@@ -19,9 +19,14 @@ jobs:
             - name: FirstStep
               run: echo "First Step from Second Job"
             - name: Create a Text File
-              run: echo cat > file.txt 
+              run: echo AFewThingsInFile > file.txt 
             - name: Display all file
               run: ls
-            - name: Show content of ile
+            - name: Show content of file
               run: cat file.txt
-    
+    thirdjob:
+        runs-on: ubuntu-latest
+        steps:
+            - name: First Step of Third Job
+              run: echo "We create a file.txt using Bash Command then we upload this file to artifact"
+ 
