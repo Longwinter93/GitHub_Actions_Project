@@ -1,0 +1,27 @@
+name: Simple Workflow
+run-name: ${{ github.actor }} tests this workflow
+on: [push]
+
+jobs:
+    firstjob:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository code
+              uses: actions/checkout@v5
+            - run: echo "The ${{ github.repository }} repository has been cloned to the runner"
+            - name: First Step
+              run: echo "This is first step."
+            - name: Second step
+              run: echo "This is second step"
+    secondjob:
+        runs-on: ubuntu-latest
+        steps:
+            - name: FirstStep
+              run: echo "First Step from Second Job"
+            - name: Create a Text File
+              run: echo cat > file.txt 
+            - name: Display all file
+              run: ls
+            - name: Show content of ile
+              run: cat file.txt
+    
