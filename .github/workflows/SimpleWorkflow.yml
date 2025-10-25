@@ -36,7 +36,7 @@ jobs:
             - name: Display all files and show the content of this file 
               run: ls -l; cat Luke.txt
             - name: "Upload Luke.txt to artifact"
-              uses: actions/upload-artifact
+              uses: actions/upload-artifact@v4
               with:
                  name: ItIsLukeFile 
                  path: Luke.txt
