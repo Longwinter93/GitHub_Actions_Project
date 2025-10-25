@@ -48,7 +48,7 @@ jobs:
             - name: Downloading a Luke.txt artifact from a ThirdJob job
               uses: actions/download-artifact@v4 
               with:
-                 name: ItisLukeFile
+                 name: ItIsLukeFile
             - name: Opening artifact file Luke.txt
               run: cat Luke.txt
 
