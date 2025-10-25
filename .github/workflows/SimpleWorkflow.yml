@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} tests this workflow
 on: [push, pull_request]
 
 jobs:
-    FirstJob:
+    SimpleEchoCommandsFirstJob:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout repository code
@@ -13,8 +13,7 @@ jobs:
               run: echo "This is first step."
             - name: Second step
               run: echo "This is second step"
-    SecondJob:
-        needs: FirstJob
+    CreateAndDisplayFileSecondJob:
         runs-on: ubuntu-latest
         steps:
             - name: First Step
@@ -25,7 +24,7 @@ jobs:
               run: ls
             - name: Show content of file
               run: cat file.txt
-    ThirdJob:
+    UploadingJobArtifactThirdJob:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout repository code
@@ -41,8 +40,8 @@ jobs:
               with:
                  name: ItIsLukeFile 
                  path: Luke.txt
-    FourthJob: 
-        needs: ThirdJob
+    DownloadingJobArtifactFourthJob: 
+        needs: UploadingJobArtifactThirdJob
         runs-on: ubuntu-latest
         steps:
             - name: Downloading a Luke.txt artifact from a ThirdJob job
