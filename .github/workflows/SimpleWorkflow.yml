@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} tests this workflow
 on: [push, pull_request]
 
 jobs:
-    firstjob:
+    FirstJob:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout repository code
@@ -13,10 +13,10 @@ jobs:
               run: echo "This is first step."
             - name: Second step
               run: echo "This is second step"
-    secondjob:
+    SecondJob:
         runs-on: ubuntu-latest
         steps:
-            - name: FirstStep
+            - name: First Step
               run: echo "First Step from Second Job"
             - name: Create a Text File
               run: echo AFewThingsInFile > file.txt 
@@ -24,9 +24,21 @@ jobs:
               run: ls
             - name: Show content of file
               run: cat file.txt
-    thirdjob:
+    ThirdJob:
         runs-on: ubuntu-latest
         steps:
+            - name: Checkout repository code
+              uses: actions/checkout@v5
             - name: First Step of Third Job
-              run: echo "We create a file.txt using Bash Command then we upload this file to artifact"
- 
+              run: echo "We create a Luke.txt using Bash Command, then we upload this file to artifact"
+            - name: "Create a Luke txt file"
+              run: echo "Luke learns how to use GitHub Actions." > Luke.txt
+            - name: Display all files and show the content of this file 
+              run: ls -l; cat Luke.txt
+            - name: "Upload Luke.txt to artifact"
+              uses: actions/upload-artifact
+              with:
+                 name: ItIsLukeFile 
+                 path: Luke.txt
+
+

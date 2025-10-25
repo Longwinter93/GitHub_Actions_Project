@@ -5,3 +5,10 @@
 <br>I intend to create a Building CI CD for Data Projects
 <br>It will be used Example Usage of the GitHub context [Link](https://docs.github.com/en/actions/reference/workflows-and-actions/contexts#example-usage-of-the-github-context)
 <br>Look for my notes to see what should be added from course to practise doing GitHub Actions
+<br> Browsing:
+<br>https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/pass-job-outputs
+
+<br>https://docs.github.com/en/actions/tutorials/store-and-share-data
+
+<br> downloading dependencies - reusable workflow - custom
+<br>look at tutorial what next
