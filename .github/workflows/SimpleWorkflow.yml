@@ -14,6 +14,7 @@ jobs:
             - name: Second step
               run: echo "This is second step"
     SecondJob:
+        needs: FirstJob
         runs-on: ubuntu-latest
         steps:
             - name: First Step
@@ -40,5 +41,15 @@ jobs:
               with:
                  name: ItIsLukeFile 
                  path: Luke.txt
+    FourthJob: 
+        needs: ThirdJob
+        runs-on: ubuntu-latest
+        steps:
+            - name: Downloading a Luke.txt artifact from a ThirdJob job
+              uses: actions/download-artifact@v4 
+              with:
+                 name: ItisLukeFile
+            - name: Opening artifact file Luke.txt
+              run: cat Luke.txt
 
 

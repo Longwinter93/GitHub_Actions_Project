@@ -7,8 +7,9 @@
 <br>Look for my notes to see what should be added from course to practise doing GitHub Actions
 <br> Browsing:
 <br>https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/pass-job-outputs
-
+<br> 
 <br>https://docs.github.com/en/actions/tutorials/store-and-share-data
 
-<br> downloading dependencies - reusable workflow - custom
-<br>look at tutorial what next
+<br> downloading dependencies - reusable workflow - custom. Passing artifcat between jobs
+<br>look at tutorial what next I learn and I intend to use + using Docker?
+<br>Deployment? running for example test script and if it fails it does not work and create artifacts with results??
