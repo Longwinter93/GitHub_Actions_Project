@@ -7,9 +7,11 @@
 <br>Look for my notes to see what should be added from course to practise doing GitHub Actions
 <br> Browsing:
 <br>https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/pass-job-outputs
-<br> 
+<br> https://docs.github.com/en/actions/reference/workflows-and-actions/contexts 
+<br>https://docs.github.com/en/actions/reference/workflows-and-actions/expressions
 <br>https://docs.github.com/en/actions/tutorials/store-and-share-data
 <br> Using variables!!
 <br> downloading dependencies - reusable workflow - custom. Passing artifcat between jobs
 <br>look at tutorial what next I learn and I intend to use + using Docker?
 <br>Deployment? running for example test script and if it fails it does not work and create artifacts with results??
+<br>Using linter and autoformatter for Python/SQL - additional information in sourcelinterautoformater!
